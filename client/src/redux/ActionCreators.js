@@ -4,7 +4,7 @@ import { baseUrl } from '../shared/baseUrl';
 export const fetchTeas = () => dispatch => {
     dispatch(teasLoading());
 
-    return fetch(baseUrl + 'teas')
+    return fetch(baseUrl + 'api/teas')
         .then(response => {
                 if (response.ok) {
                     return response;
@@ -39,7 +39,7 @@ export const addTeas = teas => ({
 });
 
 export const fetchComments = () => dispatch => {
-    return fetch(baseUrl + 'comments')
+    return fetch(baseUrl + 'api/comments')
         .then(response => {
                 if (response.ok) {
                     return response;
@@ -85,7 +85,7 @@ export const postComment = (teaId, rating, text) => dispatch => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'comments', {
+    return fetch(baseUrl + 'api/comments', {
         method: 'POST',
         body: JSON.stringify(newComment),
         headers: {
@@ -116,7 +116,7 @@ export const postComment = (teaId, rating, text) => dispatch => {
 export const fetchPromotions = () => dispatch => {
     dispatch(promotionsLoading());
 
-    return fetch(baseUrl + 'promotions')
+    return fetch(baseUrl + 'api/promotions')
         .then(response => {
                 if (response.ok) {
                     return response;
@@ -153,7 +153,7 @@ export const addPromotions = promotions => ({
 export const fetchPartners = () => dispatch => {
     dispatch(partnersLoading());
 
-    return fetch(baseUrl + 'partners')
+    return fetch(baseUrl + 'api/partners')
         .then(response => {
                 if (response.ok) {
                     return response;
@@ -188,7 +188,7 @@ export const addPartners = partners => ({
 });
 
 export const postFeedback = feedback => () => {
-    return fetch(baseUrl + 'feedback', {
+    return fetch(baseUrl + 'api/feedback', {
         method: 'POST',
         body: JSON.stringify(feedback),
         headers: {
@@ -243,7 +243,7 @@ export const loginUser = creds => dispatch => {
     // We dispatch requestLogin to kickoff the call to the API
     dispatch(requestLogin(creds))
 
-    return fetch(baseUrl + 'users/login', {
+    return fetch(baseUrl + 'api/users/login', {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json' 
@@ -304,7 +304,7 @@ export const postFavorite = teaId => dispatch => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'favorites/' + teaId, {
+    return fetch(baseUrl + 'api/favorites/' + teaId, {
         method: 'POST',
         headers: {
             'Authorization': bearer
@@ -334,7 +334,7 @@ export const deleteFavorite = teaId => dispatch => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'favorites/' + teaId, {
+    return fetch(baseUrl + 'api/favorites/' + teaId, {
         method: 'DELETE',
         headers: {
             'Authorization': bearer
@@ -365,7 +365,7 @@ export const fetchFavorites = () => dispatch => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'favorites', {
+    return fetch(baseUrl + 'api/favorites', {
         headers: {
             'Authorization': bearer
         },
