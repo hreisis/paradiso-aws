@@ -9,3 +9,6 @@ A MERN stack web app for a boba tea shop which allows customers and staff to pos
 * MongoDB
 * Mongoose
 * AWS EC2
+
+## Site Link
+http://52.27.22.176/ 
