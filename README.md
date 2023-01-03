@@ -11,4 +11,11 @@ A MERN stack web app for a boba tea shop which allows customers and staff to pos
 * AWS EC2
 
 ## Site Link
-http://52.27.22.176/ 
+http://www.paradiso-tea.com
+
+## Interface Quick Glance
+<img src="https://github.com/hreisis/paradiso-aws/blob/master/gitImages/image1.png" height="250" />&nbsp;
+<img src="https://github.com/hreisis/paradiso-aws/blob/master/gitImages/image2.png" height="250" />&nbsp;
+<img src="https://github.com/hreisis/paradiso-aws/blob/master/gitImages/image3.png" height="250" />&nbsp;
+<img src="https://github.com/hreisis/paradiso-aws/blob/master/gitImages/image4.png" height="250" />&nbsp;
+<img src="https://github.com/hreisis/paradiso-aws/blob/master/gitImages/image5.png" height="250" />&nbsp;
